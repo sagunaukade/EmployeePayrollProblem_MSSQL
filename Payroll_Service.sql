@@ -9,3 +9,11 @@ CREATE TABLE Employee_Payroll (
     Salary float,
     StartDate date,
 ); 
+
+---- Insert Values in Table UC-3 ----
+insert into employee_payroll (Name, Salary, StartDate) values
+('Saguna', 20000.00, '2009-09-05'),
+('Amruta', 70000.00, '2014-02-06'),
+('Vaishnvi', 90000.00, '2011-01-04'),
+('Lavanya', 10000.00, '2019-05-01'),
+('Raghav', 30000.00, '2022-02-02');
