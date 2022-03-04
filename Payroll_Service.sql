@@ -58,3 +58,18 @@ where name ='Vaishnvi';
 Update employee_payroll 
 set EmployeePhoneNumber='8715605050',Address='Bareilly,UP'
 where name ='Raghav';
+
+------- Rename Salary to Basic Pay and Add Deduction,Taxable pay, Income Pay, Netpay UC-9 -------
+Alter table employee_payroll
+add Deduction float,TaxablePay float, IncomeTax float,NetPay float;
+Update employee_payroll 
+set Deduction=1000
+where Gender='F';
+Update employee_payroll 
+set Deduction=2000
+where Gender='M';
+update employee_payroll
+set NetPay=(BasicPay - Deduction)
+update employee_payroll
+set TaxablePay=0,IncomeTax=0
+select * from employee_payroll;
