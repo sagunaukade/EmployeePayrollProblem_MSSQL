@@ -32,3 +32,9 @@ SET Gender = 'M' WHERE Name = 'Raghav';
 UPDATE Employee_Payroll
 SET Gender = 'F' WHERE Name = 'Amruta';
 
+----- Use Aggregate Functions and Group by Gender UC-7----
+select Sum(salary) as "TotalSalary",Gender from employee_payroll group by Gender;
+select Avg(salary) as "AverageSalary",Gender from employee_payroll group by Gender;
+select Min(salary) as "MinimumSalary",Gender from employee_payroll group by Gender;
+select Max(salary) as "MaximumSalary",Gender from employee_payroll group by Gender;
+select count(salary) as "CountSalary",Gender from employee_payroll group by Gender;
