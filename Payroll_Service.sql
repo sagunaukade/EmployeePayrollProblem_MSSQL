@@ -73,3 +73,18 @@ set NetPay=(BasicPay - Deduction)
 update employee_payroll
 set TaxablePay=0,IncomeTax=0
 select * from employee_payroll;
+
+---- Terissa as part of Sales and Marketing Department UC-10 ----
+UPDATE Employee_Payroll
+SET EmployeeDepartment = 'Sales' 
+WHERE Name = 'Terisa';
+
+INSERT INTO Employee_Payroll
+(
+    Name,Salary, StartDate , Gender ,EmployeeDepartment
+)
+VALUES
+(
+    'Terisa',60000.00,'2018-01-03','F','Marketing'
+);
+SELECT * FROM Employee_Payroll;
