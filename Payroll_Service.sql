@@ -17,3 +17,6 @@ insert into employee_payroll (Name, Salary, StartDate) values
 ('Vaishnvi', 90000.00, '2011-01-04'),
 ('Lavanya', 10000.00, '2019-05-01'),
 ('Raghav', 30000.00, '2022-02-02');
+
+---- Retrieve employee_payroll data UC-4 ----
+select * from Employee_Payroll;
