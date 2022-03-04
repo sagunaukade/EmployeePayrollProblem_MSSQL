@@ -25,3 +25,10 @@ select * from Employee_Payroll;
 select salary from employee_payroll where Name = 'Lavanya';
 select * from employee_payroll where StartDate between cast ('2018-01-01' as date) and GETDATE();
 
+---- Alter And Update Data UC-6 ----
+ALTER TABLE Employee_Payroll ADD Gender CHAR(1);
+UPDATE Employee_Payroll
+SET Gender = 'M' WHERE Name = 'Raghav';
+UPDATE Employee_Payroll
+SET Gender = 'F' WHERE Name = 'Amruta';
+
