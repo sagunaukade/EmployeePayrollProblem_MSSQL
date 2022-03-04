@@ -20,3 +20,8 @@ insert into employee_payroll (Name, Salary, StartDate) values
 
 ---- Retrieve employee_payroll data UC-4 ----
 select * from Employee_Payroll;
+
+---- Retrieve salary of particular employee and particular date range UC-5 ----
+select salary from employee_payroll where Name = 'Lavanya';
+select * from employee_payroll where StartDate between cast ('2018-01-01' as date) and GETDATE();
+
